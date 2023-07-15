@@ -6,6 +6,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../Firebase";
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
 
@@ -17,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
     signInWithPopup(auth, provider);
   };
 
-  const logOut = () => {
+  const logOut = async () => {
     signOut(auth);
   };
   

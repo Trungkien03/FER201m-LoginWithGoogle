@@ -23,7 +23,7 @@ export const Footer = () => {
         {/* Footer */}
       <Box sx={{ bgcolor: '#1976d2', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom color="white">
-          Staffs
+          News
         </Typography>
         <Typography
           variant="subtitle1"
@@ -31,7 +31,7 @@ export const Footer = () => {
           color="white"
           component="p"
         >
-          Staffs Management system for Administrator!
+          News Management system for Administrator!
         </Typography>
         <Copyright />
       </Box>

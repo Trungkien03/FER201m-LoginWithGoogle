@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createContext } from "react";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
@@ -34,7 +33,7 @@ const Provider = ({ children }) => {
     try {
       const res = await axios.put(`${URL}/${id}`, data);
       if (res.status === 200) {
-        toast.success(`Updated Staff with ID: ${id} successfully ~`, { toastId: "updateSuccess" });
+        toast.success(`Updated news with ID: ${id} successfully ~`, { toastId: "updateSuccess" });
         getListStaff();
       }
     } catch (error) {
@@ -46,7 +45,7 @@ const Provider = ({ children }) => {
   const handleAddNew = async (data) => {
     const res = await axios.post(`${URL}`, data);
     if (res.status === 200 || res.status === 201) {
-      toast.success("New staff has been added successfully!", { toastId: "addSuccess" });
+      toast.success("New news has been added successfully!", { toastId: "addSuccess" });
       getListStaff();
       <Navigate to="/dashboard" />;
     }

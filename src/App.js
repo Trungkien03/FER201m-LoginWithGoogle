@@ -18,11 +18,11 @@ function App() {
         <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/home' element={<Home/>}/>
+        <Route path='/signin' element={<FormSignIn/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/dashboard' element={<Protected><Dashboard/></Protected>}/>
         <Route path='/detail/:id' element={<Detail/>}/>
         <Route path='/add' element={<Protected><FormAdd/></Protected>}/>
-        <Route path='/signin' element={<FormSignIn/>}/>
         <Route path='/topnews' element={<TopNews/>}/>
         </Routes>
       </Router>

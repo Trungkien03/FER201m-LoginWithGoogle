@@ -14,15 +14,15 @@ import ToastProvider from "./components/ToastProvider";
 import { AuthContextProvider } from "./contexts/AuthContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ToastProvider>
-    <AuthContextProvider>
-      <Provider>
-        <React.StrictMode>
+  <AuthContextProvider>
+    <Provider>
+      <React.StrictMode>
+        <ToastProvider>
           <App />
-        </React.StrictMode>
-      </Provider>
-    </AuthContextProvider>
-  </ToastProvider>
+        </ToastProvider>
+      </React.StrictMode>
+    </Provider>
+  </AuthContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
